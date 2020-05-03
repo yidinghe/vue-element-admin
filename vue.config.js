@@ -80,12 +80,12 @@ module.exports = {
       })
       .end()
 
-    config
-      // https://webpack.js.org/configuration/devtool/#development
-      .when(process.env.NODE_ENV === 'development',
-        // config => config.devtool('source-map')
-        config => config.devtool('eval')
-      )  
+    // config
+    //   // https://webpack.js.org/configuration/devtool/#development
+    //   .when(process.env.NODE_ENV === 'development',
+    //     // config => config.devtool('source-map')
+    //     config => config.devtool('eval')
+    //   )  
 
     config
       .when(process.env.NODE_ENV !== 'development',
