@@ -34,7 +34,9 @@ English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md) | [Spa
 
 This is the study project based on vue-element-admin.
 
-run following command to start local development
+## Development Config
+
+Run following command to start local development
 
 ###### npm i 
 ###### npm run dev
