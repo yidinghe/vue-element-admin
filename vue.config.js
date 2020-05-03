@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'vue Element Admin' // page title
+const name = defaultSettings.title || '小贺读书' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -79,6 +79,13 @@ module.exports = {
         return options
       })
       .end()
+
+    config
+      // https://webpack.js.org/configuration/devtool/#development
+      .when(process.env.NODE_ENV === 'development',
+        // config => config.devtool('source-map')
+        config => config.devtool('eval')
+      )  
 
     config
       .when(process.env.NODE_ENV !== 'development',

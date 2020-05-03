@@ -33,3 +33,17 @@ English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md) | [Spa
 [vue-element-admin](https://panjiachen.github.io/vue-element-admin) is a production-ready front-end solution for admin interfaces. It is based on [vue](https://github.com/vuejs/vue) and uses the UI Toolkit [element-ui](https://github.com/ElemeFE/element).
 
 This is the study project based on vue-element-admin.
+
+run following command to start local development
+
+###### npm i 
+###### npm run dev
+To Debug source code, comment out the vue.config.js to enable sourceMap full.
+```js
+    config
+      // https://webpack.js.org/configuration/devtool/#development
+      .when(process.env.NODE_ENV === 'development',
+        // config => config.devtool('source-map')
+        config => config.devtool('eval')
+      )  
+```
